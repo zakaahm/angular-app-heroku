@@ -1,0 +1,45 @@
+.Quran-Chapters{
+
+    text-align: justify;
+}
+
+a, a:focus, a:active {
+    text-decoration: none;
+    color: black;
+}
+
+.table{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 350%;
+}
+
+p {
+    text-align: right;
+}
+
+a{
+    box-shadow: none;
+    border: none;
+    background-color: white;
+    color: none;
+}
+a:hover{
+    color: green;
+    
+}
+#searchBtn:hover{
+    color: white;
+    background-color: green;
+}
+
+#ar{
+    float: right;
+    white-space: pre-line;
+}

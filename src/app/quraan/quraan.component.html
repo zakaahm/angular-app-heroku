@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    
+    
+  </head>
+  <body>
+    <nav class="navbar">
+      
+    </nav>
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container" id="resultaat">
+            <br>
+            <h1 class='display-4, Roboto'> Quran chapters</h1>
+            <br> <br>
+
+            <div class="form-group">
+              <form class="d-flex">
+                <input class="form-control me-2" type="text" name="searchText" placeholder="Enter the name of a chapter" [(ngModel)]="searchText">
+              </form>
+            </div>
+            
+            <br>
+            <table class='table'>
+              <tbody>
+                <tr *ngFor='let item of chapters | filter:searchText'>
+                  <td>
+                    <a class="btn, Roboto" [routerLink]="['/verses',  item?.number]"> {{ item.number }}. {{ item.en }} </a>
+                    <br>
+                    <a id="ar" class="btn, Roboto" [routerLink]="['/verses',  item?.number]"> {{ item.ar }}</a>
+                  </td> 
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
+</body>
+</html>
+
