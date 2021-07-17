@@ -15,7 +15,7 @@ export class VersesService {
 
 
   getChapters(id : any): Observable<Verse[]> {
-    let url = `http://localhost:3000/surah/${id}`;
+    let url = `https://quraanapi.herokuapp.com/surah/${id}`;
     console.log(url)
     return this.http.get<Verse[]>(url);
   } 

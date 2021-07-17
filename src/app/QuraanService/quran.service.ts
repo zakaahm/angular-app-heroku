@@ -12,7 +12,7 @@ export class QuranService {
   constructor(private http: HttpClient) { }
 
   //API: quran-endpoint.vercel.app/
-  private baseUrl: string = "http://localhost:3000/chapters"
+  private baseUrl: string = "https://quraanapi.herokuapp.com/chapters"
 
 
   getChapters(): Observable<Chapter[]> {
